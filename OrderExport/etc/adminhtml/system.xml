@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MagoArab Order Export System Configuration
+ * 
+ * @category  MagoArab
+ * @package   MagoArab_OrderExport
+ * @author    MagoArab Team
+ * @copyright Copyright (c) 2024 MagoArab
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magoarab" translate="label" sortOrder="200">
+            <label>MagoArab</label>
+        </tab>
+        <section id="magoarab_orderexport" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Order Export Settings</label>
+            <tab>magoarab</tab>
+            <resource>MagoArab_OrderExport::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Enhanced Export</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/general/enabled</config_path>
+                </field>
+            </group>
+            
+            <group id="columns" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Export Columns Control</label>
+                <comment>Control which columns to include in the export</comment>
+                
+                <field id="include_order_id" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Order ID</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_order_id</config_path>
+                </field>
+                
+                <field id="include_status" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Order Status</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_status</config_path>
+                </field>
+                
+                <field id="include_billing_name" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Billing Name</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_billing_name</config_path>
+                </field>
+                
+                <field id="include_customer_email" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Customer Email</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_customer_email</config_path>
+                </field>
+                
+                <field id="include_governorate" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Governorate</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_governorate</config_path>
+                </field>
+                
+                <field id="include_grand_total" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Grand Total</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_grand_total</config_path>
+                </field>
+                
+                <field id="include_shipping_amount" translate="label" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Shipping Amount</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_shipping_amount</config_path>
+                </field>
+                
+                <field id="include_customer_notes" translate="label" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Customer Notes</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/include_customer_notes</config_path>
+                </field>
+                
+                <field id="exclude_lock_column" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Exclude Lock Column</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/exclude_lock_column</config_path>
+                </field>
+                <field id="exclude_allocated_sources" translate="label" type="select" sortOrder="91" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Exclude Allocated Sources Column</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/columns/exclude_allocated_sources</config_path>
+                </field>
+            </group>
+            
+            <group id="product_details" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product Details Control</label>
+                <comment>Control product information in the export</comment>
+                
+                <field id="include_product_details" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Product Details</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/product_details/include_product_details</config_path>
+                </field>
+                
+                <field id="include_product_skus" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Product SKUs</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/product_details/include_product_skus</config_path>
+                    <depends>
+                        <field id="include_product_details">1</field>
+                    </depends>
+                </field>
+                
+                <field id="include_product_names" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Product Names</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/product_details/include_product_names</config_path>
+                    <depends>
+                        <field id="include_product_details">1</field>
+                    </depends>
+                </field>
+                
+                <field id="include_product_quantities" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Product Quantities</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/product_details/include_product_quantities</config_path>
+                    <depends>
+                        <field id="include_product_details">1</field>
+                    </depends>
+                </field>
+                
+                <field id="include_product_prices" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Include Product Prices</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <config_path>magoarab_orderexport/product_details/include_product_prices</config_path>
+                    <depends>
+                        <field id="include_product_details">1</field>
+                    </depends>
+                </field>
+                
+                <field id="additional_attributes" translate="label" type="multiselect" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Product Attributes</label>
+                    <source_model>MagoArab\OrderExport\Model\Config\Source\ProductAttributes</source_model>
+                    <config_path>magoarab_orderexport/product_details/additional_attributes</config_path>
+                    <can_be_empty>1</can_be_empty>
+                    <comment>Select useful product attributes to include in export</comment>
+                    <depends>
+                        <field id="include_product_details">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

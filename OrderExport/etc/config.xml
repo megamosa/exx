@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * MagoArab Order Export Default Configuration
+ * 
+ * @category  MagoArab
+ * @package   MagoArab_OrderExport
+ * @author    MagoArab Team
+ * @copyright Copyright (c) 2024 MagoArab
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <magoarab_orderexport>
+            <general>
+                <enabled>1</enabled>
+            </general>
+            <columns>
+                <include_order_id>1</include_order_id>
+                <include_status>1</include_status>
+                <include_billing_name>1</include_billing_name>
+                <include_customer_email>1</include_customer_email>
+                <include_governorate>1</include_governorate>
+                <include_grand_total>1</include_grand_total>
+                <include_shipping_amount>1</include_shipping_amount>
+                <include_customer_notes>1</include_customer_notes>
+            </columns>
+            <product_details>
+                <include_product_details>1</include_product_details>
+                <include_product_skus>1</include_product_skus>
+                <include_product_names>1</include_product_names>
+                <include_product_quantities>1</include_product_quantities>
+                <include_product_prices>1</include_product_prices>
+                <additional_attributes></additional_attributes>
+            </product_details>
+        </magoarab_orderexport>
+    </default>
+</config>

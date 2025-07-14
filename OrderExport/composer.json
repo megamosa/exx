@@ -1,0 +1,29 @@
+{
+    "name": "magoarab/module-order-export",
+    "description": "MagoArab Enhanced Order Export Module for Magento 2",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": "OSL-3.0",
+    "authors": [
+        {
+            "name": "MagoArab Team",
+            "email": "info@magoarab.com"
+        }
+    ],
+    "require": {
+        "php": "~7.4.0||~8.1.0||~8.2.0",
+        "magento/framework": "*",
+        "magento/module-sales": "*",
+        "magento/module-backend": "*",
+        "magento/module-ui": "*",
+        "magento/module-catalog": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MagoArab\\OrderExport\\": ""
+        }
+    }
+}

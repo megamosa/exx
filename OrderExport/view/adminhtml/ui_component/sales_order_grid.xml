@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * MagoArab Order Export Grid Enhancement
+ * 
+ * @category  MagoArab
+ * @package   MagoArab_OrderExport
+ * @author    MagoArab Team
+ * @copyright Copyright (c) 2024 MagoArab
+ */
+-->
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="governorate" class="Magento\Ui\Component\Listing\Columns\Column">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Governorate</label>
+                <visible>true</visible>
+                <sortOrder>200</sortOrder>
+            </settings>
+        </column>
+        <column name="customer_note" class="Magento\Ui\Component\Listing\Columns\Column">
+            <settings>
+                <filter>text</filter>
+                <label translate="true">Customer Note</label>
+                <visible>false</visible>
+                <sortOrder>210</sortOrder>
+            </settings>
+        </column>
+    </columns>
+    <listingToolbar name="listing_top">
+        <filters name="listing_filters">
+            <filterSelect name="governorate" provider="${$.parentName}">
+                <settings>
+                    <options class="MagoArab\OrderExport\Ui\Component\Listing\Column\Governorate\Options"/>
+                    <caption translate="true">Select Governorate</caption>
+                    <label translate="true">Governorate</label>
+                    <dataScope>governorate</dataScope>
+                    <imports>
+                        <link name="visible">componentType = column, index = ${ $.index }:visible</link>
+                    </imports>
+                </settings>
+            </filterSelect>
+        </filters>
+    </listingToolbar>
+</listing>
